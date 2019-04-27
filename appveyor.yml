@@ -16,17 +16,17 @@ before_build:
     nuget restore
 
 build:
-  project: C:\projects\Dotfeather.Router\Dotfeather.Router.csproj
+  project: C:\projects\DotFeather.Router\DotFeather.Router.csproj
   publish_nuget: true
 
 configuration: Release
 
 after_build:
-  - nuget pack -Prop Configuration=Release Dotfeather.Router -OutputDirectory Dotfeather.Router/bin/Release/
+  - nuget pack -Prop Configuration=Release DotFeather.Router -OutputDirectory DotFeather.Router/bin/Release/
 
 artifacts:
   - path: '**\*.nupkg'
-    name: Dotfeather.Router
+    name: DotFeather.Router
 
 deploy:
 - provider: NuGet
