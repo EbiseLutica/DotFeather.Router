@@ -22,7 +22,7 @@ build:
 configuration: Release
 
 after_build:
-  - nuget pack -Prop Configuration=Release DotFeather.Router -OutputDirectory dotfeather-router/bin/Release/
+  - dotnet pack
 
 artifacts:
   - path: '**\*.nupkg'
