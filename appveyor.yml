@@ -13,7 +13,7 @@ dotnet_csproj:
 
 before_build:
 - ps: >-
-    nuget restore
+    dotnet restore
 
 build:
   project: C:\projects\DotFeather.Router\DotFeather.Router.csproj
